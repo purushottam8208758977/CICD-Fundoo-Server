@@ -34,7 +34,7 @@ app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/', route)
 
 /**
- * @description - An event is emitted or listened when PORT is turned on
+ * @description - An event is ..emitted or listened when PORT is turned on
  */
 app.listen(4000, () => {
     logger.info(`Server is running on Port : 4000`);
