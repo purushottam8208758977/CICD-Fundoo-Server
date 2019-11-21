@@ -19,7 +19,7 @@ require('dotenv').config()
 var upload = multer({
     storage: multerS3({
         s3: s3,
-        bucket: process.env.BUCKET,
+   //     bucket: process.env.BUCKET,
         //acl: 'public-read',
         key: (req, file, callback) => {
             
