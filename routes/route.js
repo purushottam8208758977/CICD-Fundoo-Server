@@ -10,8 +10,8 @@
  * 
  **************************************************************************/
 
-const express = require('express');
-const multer= require('../services/multer.js')
+//const express = require('express');
+//const multer= require('../services/multer.js')
 const route = express.Router();
 const userController = require('../controllers/user');
 const noteController = require('../controllers/note')
@@ -22,7 +22,7 @@ const tokenFile = require('../middlewares/token')
 route.post('/registration', userController.registering);
 route.post('/emailVerification',tokenFile.verifyRegistrationToken,userController.verifyingEmail)
 route.post('/login',userController.loggingIn)
-route.post('/upload',tokenFile.verifyToken,multer.single('file'),userController.imageUploading)
+//route.post('/upload',tokenFile.verifyToken,multer.single('file'),userController.imageUploading)
 route.post('/forgetPassword',userController.forgettingPassword)
 route.post('/resetPassword',tokenFile.verifyRegistrationToken,userController.resettingPassword)
 
