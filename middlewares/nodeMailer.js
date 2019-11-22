@@ -7,14 +7,18 @@ module.exports = {
 
         try {
            console.log("user  ---->", process.env.USEREMAIL)
-
+            let envString=""
+            envString=process.env.USEREMAIL
+            let envArray=envString.split(" ")
+            console.log("\n\tenv Array---> ",envArray)
+            console.log("\n\tfirst element---> ",envArray[0])
             console.log("url received" + urlReceived);
             let transporter =  mailer.createTransport({
             
                 
-                service: process.env.USERSERVICE,
+                service: gmail,
                 auth: {
-                    user: process.env.USEREMAIL,
+                    user: envArray[0],
                     pass: process.env.USERPASSWORD
                 }
             })
