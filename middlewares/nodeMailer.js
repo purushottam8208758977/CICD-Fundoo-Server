@@ -15,7 +15,8 @@ module.exports = {
             console.log("url received" + urlReceived);
 
             let password=envArray[1].split("=")
-            console.log("\n\n\tpassword --->",password)
+            console.log("\n\n\tpassword --->",password[1])
+            
             let transporter =  mailer.createTransport({
            
                 //ss
