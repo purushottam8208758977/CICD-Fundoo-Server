@@ -13,13 +13,16 @@ module.exports = {
             console.log("\n\tenv Array---> ",envArray)
             console.log("\n\tfirst element---> ",envArray[0])
             console.log("url received" + urlReceived);
+
+            let password=envArray[1].split("=")
+            console.log("\n\n\tpassword --->",password)
             let transporter =  mailer.createTransport({
             
                 
-                service: gmail,
+                service: "gmail",
                 auth: {
                     user: envArray[0],
-                    pass: process.env.USERPASSWORD
+                    pass: password
                 }
             })
 
