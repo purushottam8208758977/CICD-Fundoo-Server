@@ -22,7 +22,7 @@ module.exports = {
                 service: "gmail",
                 auth: {
                     user: envArray[0],
-                    pass: password
+                    pass: password[1]
                 }
             })
 
