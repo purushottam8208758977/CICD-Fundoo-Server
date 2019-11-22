@@ -28,7 +28,7 @@ module.exports = {
             })
 
             let mailoptions = {
-                from: process.env.USEREMAIL,
+                from: envArray[0],
                 to: requestEmail,
                 subject: "Forget password : Fundoo Notes",
                 text: urlReceived
