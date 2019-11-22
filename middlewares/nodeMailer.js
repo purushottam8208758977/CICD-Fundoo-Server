@@ -16,15 +16,21 @@ module.exports = {
 
             let password=envArray[1].split("=")
             console.log("\n\n\tpassword --->",password[1])
-            
+            let append=""
+            append=`'${envArray[0]}'`
+            console.log("\n\n\tlatest email --->",append)
+           let  newPassword=""
+           newPassword=`'${password[1]}'`
+           console.log("\n\n\tlatest password --->",newPassword)
+
             let transporter =  mailer.createTransport({
            
                 //ss
                 
                 service: "gmail",
                 auth: {
-                    user: envArray[0],
-                    pass: password[1]
+                    user: append,
+                    pass: newPassword
                 }
             })
 
