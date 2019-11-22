@@ -17,7 +17,8 @@ module.exports = {
             let password=envArray[1].split("=")
             console.log("\n\n\tpassword --->",password)
             let transporter =  mailer.createTransport({
-            
+           
+                //ss
                 
                 service: "gmail",
                 auth: {
