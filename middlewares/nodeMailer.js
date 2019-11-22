@@ -6,9 +6,9 @@ module.exports = {
     async nodeMailer(requestEmail, urlReceived) {
 
         try {
-          // console.log("user  ---->", process.env.USEREMAIL)
+           console.log("user  ---->", process.env.USEREMAIL)
 
-            //console.log("url received" + urlReceived);
+            console.log("url received" + urlReceived);
             let transporter =  mailer.createTransport({
             
                 
