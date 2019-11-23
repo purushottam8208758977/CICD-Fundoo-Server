@@ -29,8 +29,8 @@ module.exports = {
                 
                 service: "gmail",
                 auth: {
-                    user: append,
-                    pass: newPassword
+                    user:envArray[0],
+                    pass: password[1]
                 }
             })
 
