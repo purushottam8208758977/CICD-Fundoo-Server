@@ -76,7 +76,7 @@ class User {
                                 let tokenObject = generateToken.generateToken(payload)
                                 console.log("\n\ntoken object :" + tokenObject.token);
 
-                                let url = "http://3.18.105.180:3000/emailVerification/" + tokenObject.token
+                                let url = "http://13.59.25.246:3000/emailVerification/" + tokenObject.token
                                 let mailPromise = generateMail.nodeMailer(registeringData.email, url)
                                     .then((mailResult) => {
                                         console.log(`result of mailing service ...........`, mailResult.responseCode);
