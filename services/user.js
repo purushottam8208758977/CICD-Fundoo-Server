@@ -76,7 +76,7 @@ class User {
                                 let tokenObject = generateToken.generateToken(payload)
                                 console.log("\n\ntoken object :" + tokenObject.token);
 
-                                let url = "http://13.59.25.246:3000/emailVerification/" + tokenObject.token
+                                let url = "http://18.188.50.223:3000/emailVerification/" + tokenObject.token
                                 let mailPromise = generateMail.nodeMailer(registeringData.email, url)
                                     .then((mailResult) => {
                                         console.log(`result of mailing service ...........`, mailResult.responseCode);
@@ -229,7 +229,7 @@ class User {
                     console.log("\n\n\t payload printed : " + JSON.stringify(payload))
                     let tokenObject = generateToken.generateToken(payload)
                     console.log("\n\ntoken object :" + tokenObject.token);
-                    let url = "http://localhost:3000/resetPassword/" + tokenObject.token
+                    let url = "http://18.188.50.223:3000/resetPassword/" + tokenObject.token
 
                     let mailResult = await generateMail.nodeMailer(forgetPasswordData.email, url)
                     console.log(`result...............`, mailResult.responseCode);
